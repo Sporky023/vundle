@@ -12,7 +12,6 @@ func! vundle#config#plugin(arg, ...)
 endf
 
 func! vundle#config#activate_all_plugins(...)
-  call vundle#rc(a:000)
   call map(g:bundles, 'vundle#config#init_bundle(v:val[0], v:val[1])')
   call s:rtp_add_a()
   call s:rtp_add_defaults()
